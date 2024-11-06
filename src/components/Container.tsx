@@ -12,7 +12,7 @@ export const Container = (props: Props) => {
     const { children, className, otherProps } = props
 
     return (
-        <div className={twMerge("w-[100vw] min-h-[86vh]", className)} {...otherProps}>
+        <div className={twMerge("w-[100vw] md:min-h-[86vh] min-h-[90vh]", className)} {...otherProps}>
             {children}
         </div>
     )

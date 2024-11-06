@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <Container className="flex flex-col items-center justify-start gap-10 py-20 animate-animate-appear">
-      <div className=" w-[80%] flex items-center justify-between">
+    <Container className="flex flex-col items-center justify-start gap-10 md:py-20 py-10 animate-animate-appear">
+      <div className=" md:w-[80%] w-[90%] flex md:flex-row md:gap-0 gap-4 flex-col items-center justify-between">
         <DataBox
           title="About The Host Institute"
           data="The IEM group is an acclaimed educational group amongst the
@@ -25,7 +25,7 @@ export default function About() {
         <Image src="/images/iem.jpeg" width={400} height={400} alt="SP2" />
       </div>
 
-      <div className=" w-[80%] flex items-center justify-between">
+      <div className=" md:w-[80%] w-[90%] flex md:flex-row md:gap-0 gap-4 flex-col-reverse items-center justify-between">
         <Image src="/images/iem-logo.png" width={400} height={400} alt="SP1" />
         <DataBox
           title="About The Conference"

@@ -37,7 +37,7 @@ function calculateCardRotation({
   return { rotationX, rotationY };
 }
 
-export default function GithubCardSkew({ className, children }: { className?: string, children: React.ReactNode }) {
+export default function GithubCardSkew({ className, children, onClick }: { className?: string, children: React.ReactNode, onClick: () => void }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const resetRef = useRef<NodeJS.Timeout>();
 
@@ -63,6 +63,7 @@ export default function GithubCardSkew({ className, children }: { className?: st
 
   return (
     <div
+      onClick={onClick}
       ref={containerRef}
       className={cn(
         "flex max-w-80 transform-gpu hover:border-primary flex-col gap-4 rounded-3xl border border-border bg-zinc-700 p-10 text-zinc-200 shadow-lg transition-transform ease-linear will-change-transform",

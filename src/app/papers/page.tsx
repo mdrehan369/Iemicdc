@@ -1,14 +1,25 @@
 import { Container } from "@/components/Container";
 import { Separator } from "@/components/Separator";
+import Link from "next/link";
 
-const Track = ({ title, list }: { title: string; list: Array<string> }) => {
+const Track = ({
+  title,
+  list,
+  id,
+}: {
+  title: string;
+  list: Array<string>;
+  id: string;
+}) => {
   return (
     <>
-      <h1 className="text-4xl font-bold text-primary mt-10">{title}</h1>
+      <h1 id={id} className="md:text-4xl text-2xl font-bold text-primary mt-2 mb-4">
+        {title}
+      </h1>
       <Separator />
-      <ul className=" list-disc mt-6 text-gray-700">
+      <ul className=" list-disc mt-6 text-gray-700 mb-10 space-y-2">
         {list.map((item, index) => (
-          <li key={index} className="text-lg">
+          <li key={index} className="md:text-lg text-sm">
             {item}
           </li>
         ))}
@@ -20,11 +31,62 @@ const Track = ({ title, list }: { title: string; list: Array<string> }) => {
 export default function Papers() {
   return (
     <Container className=" py-10 flex flex-col items-center justify-start gap-10 animate-animate-appear">
+      <div className="w-[80%] text-gray-700">
+        <h3 className="md:text-xl text-lg font-medium">
+          All papers should be submitted through EasyChair link.
+        </h3>
+        <ul className="my-4 list-disc mx-4">
+          <li>
+            EasyChair submission link{" "}
+            <Link
+              className="text-blue-500 underline"
+              target="__blank"
+              href="https://easychair.org/conferences/?conf=iemicdc2025"
+            >
+              here
+            </Link>
+          </li>
+          <li>
+            Springer Paper Submission Guideline{" "}
+            <Link
+              className="text-blue-500 underline"
+              target="__blank"
+              href={
+                "https://www.springer.com/gp/authors-editors/conference-proceedings/conferenceproceedings-guidelines"
+              }
+            >
+              here
+            </Link>
+          </li>
+          <li>
+            Download Latex Package{" "}
+            <Link
+              className="text-blue-500 underline"
+              target="__blank"
+              href={"/templates/Latex_Package.zip"}
+            >
+              here
+            </Link>
+          </li>
+          <li>
+            Download Word Template{" "}
+            <Link
+              className="text-blue-500 underline"
+              target="__blank"
+              href={"/templates/Word_Template.zip"}
+            >
+              here
+            </Link>
+          </li>
+          <li><span className="font-bold">Awards:</span> Best paper award will be provided.</li>
+        </ul>
+      </div>
       <div className="w-[80%]">
-        <h3 className="text-lg">
-          Topic of interest includes, though not limited to:
+        <h3 className="md:text-xl text-lg font-medium text-gray-700">
+          Topic of interest includes, though not limited to
         </h3>
         <Track
+          id="track1"
           title="Track 1: AI And Robotics"
           list={[
             "Expert Systems",
@@ -32,10 +94,8 @@ export default function Papers() {
             "AI in Modelling and Simulation",
             "Machine Learning",
             "Deep Learning",
-            "Intelligent devices and",
-            "instruments",
-            "AI in Scheduling and",
-            "Optimization",
+            "Intelligent devices and instruments",
+            "AI in Scheduling and Optimization",
             "Quantum Machine Learning",
             "Evolutionary Design",
             "Knowledge representation",
@@ -53,6 +113,7 @@ export default function Papers() {
         />
 
         <Track
+          id="track2"
           title="Track 2: Image processing and NLP"
           list={[
             "Image Processing",
@@ -60,40 +121,28 @@ export default function Papers() {
             "3D and Video Processing",
             "Pattern Recognition",
             "Virtual and Augmented Reality",
-            "Computational Linguistics &",
-            "NLP Dialog Systems",
-            "Graph, deep-learning-based",
-            "methods of NLP and IR",
-            "Information Extraction,",
-            "Retrieval",
-            "Opinion, personality and",
-            "emotion detection in social",
-            "media",
-            "Color, Multi-spectral, and",
-            "Hyper-spectral Imaging",
-            "Image & Video Interpretation",
-            "and Understanding",
-            "Stereoscopic, Multi-view,",
-            "Detection, Recognition,",
-            "Retrieval, and Classification",
+            "Computational Linguistics & NLP Dialog Systems",
+            "Graph, deep-learning-based methods of NLP and IR",
+            "Information Extraction, Retrieval",
+            "Opinion, personality and emotion detection in social media",
+            "Color, Multi-spectral, and Hyper-spectral Imaging",
+            "Image & Video Interpretation and Understanding",
+            "Stereoscopic, Multi-view, Detection, Recognition, Retrieval, and Classification",
             "Image & Video Quality Models",
-            "Biometrics, Forensics, and",
-            "Security",
-            "Biomedical and Biological",
-            "Image Processing",
+            "Biometrics, Forensics, and Security",
+            "Biomedical and Biological Image Processing",
           ]}
         />
 
         <Track
+          id="track3"
           title="Track 3: Network Cloud and Big Data"
           list={[
             "Big Data Analytics and Social",
             "Networking",
             "Recent Trends in ICT",
-            "Cloud Architecture and",
-            "applications",
-            "Service-Oriented Architecture",
-            "in Cloud Computing",
+            "Cloud Architecture and applications",
+            "Service-Oriented Architecture in Cloud Computing",
             "Cloud based parallel Processing",
             "Mobile Clouds",
             "Data Mining and Analytics",
@@ -103,18 +152,16 @@ export default function Papers() {
             "Low Power Wide Area (LPWA)",
             "networks",
             "Next generation networks",
-            "NFV, RAN, Cloud-RAN, and",
-            "Fog-RAN",
+            "NFV, RAN, Cloud-RAN, and Fog-RAN",
             "Software Defined Radio (SDR),",
-            "Cognitive Radio",
-            "(D2D) and (M2M)",
-            "communications",
+            "Cognitive Radio (D2D) and (M2M) communications",
             "LoRa, Sigfox, NB-IoT",
             "WPAN",
           ]}
         />
 
         <Track
+          id="track4"
           title="Track 4: Cyber security, Blockchain and IoT"
           list={[
             "Networking Protocol",
@@ -127,21 +174,15 @@ export default function Papers() {
             "AI & Sensors",
             "Brain Computing Interface",
             "Recent Trends in ICT",
-            "Contemporary research in the",
-            "field of ICT",
+            "Contemporary research in the field of ICT",
             "Industry 4.0/5.0 and Industrial",
             "IoT",
             "Healthcare data privacy",
-            "Biometric-based authentication",
-            "systems",
+            "Biometric-based authentication systems",
             "Multi-factor-based authentication",
-            "Passwordless authentication",
-            "systems",
-            "Smart cities, smart farming, e-",
-            "health, and home automation",
-            "applications",
-            "Privacy-preserving",
-            "communication",
+            "Passwordless authentication systems",
+            "Smart cities, smart farming, e-health, and home automation applications",
+            "Privacy-preserving communication",
           ]}
         />
       </div>
