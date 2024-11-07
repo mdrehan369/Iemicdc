@@ -8,13 +8,13 @@
   --primary: #f14f4f;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --primary: #0fa4af;
-  }
-}
+/* @media (prefers-color-scheme: system) { */
+/* :root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --primary: #0fa4af;
+} */
+/* } */
 
 body {
   color: var(--foreground);
