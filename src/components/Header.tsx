@@ -3,7 +3,7 @@
 import { Menu } from "lucide-react"
 import Image from "next/image"
 import { usePathname, useRouter } from "next/navigation"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const pages = [
     {
@@ -60,11 +60,9 @@ export const Header = () => {
                 <Image src={'/images/logo.png'} width={90} height={20} alt="" className=" cursor-pointer md:h-auto h-[10vh] object-fit" onClick={() => router.push("/")} />
                 <Image src={'/images/iem-logo.png'} width={100} height={20} alt="" className=" cursor-pointer hidden md:block" onClick={() => window.open("https://iem.edu.in/", "__blank")}/>
                 <Image src={'/images/uem-logo.png'} width={100} height={20} alt="" className=" cursor-pointer hidden md:block" onClick={() => window.open("https://uem.edu.in/uem-kolkata/", "__blank")} />
-                {/* <h1 className="w-full text-4xl">IEMICDC 2025</h1> */}
             </div>
-            {/* <h1 className="text-xl md:hidden ">IEM-ICDC 2025</h1> */}
             <Menu className="md:hidden mr-3 cursor-pointer" onClick={() => setMenu((prev) => !prev)} />
-            <nav className={`md:w-fit w-full ${!menu ? 'hidden' : 'block'} h-[100vh] md:h-[10vh] pt-6 transition-all duration-300 flex md:flex-row flex-col bg-white backdrop-blur-md md:relative absolute bg-opacity-80 md:top-0 top-[10vh] left-0 items-center animate-animate-appear md:justify-end overflow-hidden justify-start md:pt-0 gap-12 text-[1rem] font-[600] text-gray-600`}>
+            <nav className={`md:w-fit w-full ${!menu  ? 'hidden' : 'block'} md:flex h-[100vh] md:h-[10vh] pt-6 transition-all duration-300 flex md:flex-row flex-col bg-white backdrop-blur-md md:relative absolute bg-opacity-80 md:top-0 top-[10vh] left-0 items-center animate-animate-appear md:justify-end overflow-hidden justify-start md:pt-0 gap-12 text-[1rem] font-[600] text-gray-600`}>
                 {pages.map(page => (<div
                 key={page.name}
                 onClick={() => router.push(page.path)}
