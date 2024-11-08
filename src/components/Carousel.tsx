@@ -56,16 +56,16 @@ function Carousel({ ...props }) {
           id="slider"
         >
           <Image
-            src="/images/dp1.jpg"
+            src="/images/dp2.jpg"
             fill={true}
             alt=""
             className="absolute left-0 top-0 w-full md:h-full h-[90%] transition-opacity duration-500 opacity-100  md:object-fit object-cover"
           />
           <Image
-            src="/images/dp2.jpg"
+            src="/images/iem.jpeg"
             fill={true}
             alt=""
-            className="absolute transition-opacity duration-500 opacity-100 left-0 top-0 w-full md:h-full md:object-none object-cover h-[90%]"
+            className="absolute transition-opacity duration-500 opacity-100 left-0 top-0 w-full md:h-full object-fit h-[90%]"
           />
           <Image
             src="/images/dp3.jpg"

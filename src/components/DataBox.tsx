@@ -13,7 +13,7 @@ export const DataBox = (props: Props) => {
         <h1 className="w-full text-center md:text-4xl text-2xl text-primary font-bold">
           {title}
         </h1>
-        <p className="text-gray-600 md:text-lg text" dangerouslySetInnerHTML={{__html: data}}>
+        <p className="text-gray-600 md:text-lg text text-justify" dangerouslySetInnerHTML={{__html: data}}>
         </p>
       </div>
     )

@@ -104,6 +104,7 @@ export default function Papers() {
             "Robot learning and adaptation",
             "Coordination in robotics",
             "Bio Informatics",
+            "Computational Biology",
             "Biomedical sensor & robotics",
             "Heuristic Algorithms",
             "Bio Inspired Algorithms",

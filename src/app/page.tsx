@@ -44,6 +44,8 @@ export default function Home() {
     <Container className=" flex flex-col items-center justify-start gap-10">
       <Carousel />
 
+      <Image src={'/images/logo.png'} width={200} height={200} alt="" className=" cursor-pointer md:h-auto h-[20vh] object-fit w-auto" />
+
       <div className="md:w-full flex flex-col items-center w-[80%]">
         <DataBox
           title="Welcome To IEM-ICDC 2025!"
